@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 
 def validar_monto(value):
-    if value >100:
+    if value >1000:
         raise ValidationError(
             '%(value)s es mayor al tope de monto a Cobrar (Bs. 1000)',
             params={'value': value}
