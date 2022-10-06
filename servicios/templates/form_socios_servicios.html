@@ -1,0 +1,13 @@
+<form action="{% url 'socios_servicio' %}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>Servicio a cobrar del Socio</h1></legend>
+    {% if error_message %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+    <label for="socios_servicio">Codigo  del Socio</label>
+    <input type="text" name="socios_servicio"/>
+    <br/>
+    <input type="submit" value="Enviar"/>
+</fieldset>    
+</form>

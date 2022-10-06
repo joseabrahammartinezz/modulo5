@@ -1,0 +1,13 @@
+<form action="{% url 'socios'%}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>Socio</h1></legend>
+    {% if error_message %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+    <label for="socio">Nombre</label>
+    <input type="text" name="socio"/>
+    <br/>
+    <input type="submit" value="Enviar"/>
+</fieldset>    
+</form>

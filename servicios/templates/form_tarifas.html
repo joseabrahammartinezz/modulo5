@@ -1,0 +1,13 @@
+<form action="{% url 'tarifas'%}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>Tarifas</h1></legend>
+    {% if error_message %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+    <label for="tarifa">Nombre</label>
+    <input type="text" name="tarifa"/>
+    <br/>
+    <input type="submit" value="Enviar"/>
+</fieldset>    
+</form>
